@@ -12,13 +12,7 @@ class Controle extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: AlignmentDirectional.topCenter,
-            end: AlignmentDirectional.bottomCenter,
-            colors: [Colors.white, Colors.white],
-          ),
-        ),
+        color: Colors.white,
         child: const HomeScreen(),
       ),
     ),

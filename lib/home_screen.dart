@@ -6,26 +6,28 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TextButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => const FirstPage()
-                ));
-              },
-              child: const Text(
-                'Nessa Fonte',
-                style: TextStyle(
-                  decoration: TextDecoration.lineThrough,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32,
-                  color: Colors.black,
-                ),
-              )),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => const FirstPage()
+                  ));
+                },
+                child: const Text(
+                  'Nessa Fonte',
+                  style: TextStyle(
+                    decoration: TextDecoration.lineThrough,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 32,
+                    color: Colors.black,
+                  ),
+                )),
+          ],
+        ),
       ),
     );
   }
