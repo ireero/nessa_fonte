@@ -11,28 +11,70 @@ class FirstPage extends StatelessWidget {
 
 
     return Container(
-      color: const Color.fromARGB(20, 20, 20, 20),
-      child: Container(
-        color: Colors.white,
-        child: Center(
+      color: Colors.white,
+      child: Center(
+        child: Container(
+          color: Colors.blue,
+          padding: const EdgeInsets.all(20),
+          height: 255,
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Container(
-                  color: Colors.blue,
-                  padding: const EdgeInsets.all(25),
+            padding: const EdgeInsets.all(30),
+            scrollDirection: Axis.vertical,
                   child: Column(
-                    children: const [
-                      Text('Fonte 1'),
-                      Text('Fonte 1'),
-                      Text('Fonte 1')
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children:  <Widget> [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                          onPressed: (){},
+                          child: Text('Fonte 1', style: GoogleFonts.lato(
+                            color: Colors.black,
+                            fontSize: 50,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.black,
+                          ),),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text('Fonte 1', style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.none,
+                          ),),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text('Fonte 1', style: GoogleFonts.lato(
+                            color: Colors.black,
+                            fontSize: 50,
+                            decoration: TextDecoration.none,
+                          ),),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text('Fonte 1', style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 50,
+                            fontStyle: FontStyle.italic,
+                            decoration: TextDecoration.none,
+                          ),),
+                        ),
+                      ),
                     ],
                   ),
-                ),
-              ],
             ),
           ),
-        ),
       ),
     );
   }
