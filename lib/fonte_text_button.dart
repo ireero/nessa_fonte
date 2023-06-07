@@ -3,9 +3,10 @@ import 'classes/fonte_class.dart';
 
 
 class FontTextButton extends StatelessWidget {
-  FontTextButton({super.key, required var this.position});
+  FontTextButton({required var this.position, required var this.fonte_nome, super.key});
 
-  var position;
+  final position;
+  var fonte_nome;
 
   @override
   Widget build(context) {
@@ -13,7 +14,7 @@ class FontTextButton extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: TextButton(
         onPressed: () {},
-        child: Text(Fonte().text, style: Fonte().styles[position]),
+        child: Text(Fonte().text, style: fonte_nome == 'lato' ? Fonte().google_lato[position] : Fonte().google_sacramento[position]),
       ),
     );
   }

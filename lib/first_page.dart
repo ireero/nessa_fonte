@@ -21,7 +21,7 @@ class FirstPage extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Column(
-              children: const [FontSquare(), FontSquare(), FontSquare(), FontSquare(), FontSquare()],
+              children: [FontSquare('lato',), FontSquare('sacramento',), FontSquare('lato',), FontSquare('sacramento',), FontSquare('lato'),],
             ),
           ),
         ),

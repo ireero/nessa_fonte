@@ -5,7 +5,9 @@ import 'package:nessa_fonte/fonte_text_button.dart';
 
 
 class FontSquare extends StatelessWidget {
-  const FontSquare({super.key});
+  FontSquare(this.tipoFonte,{super.key});
+
+  var tipoFonte = '';
 
   @override
   Widget build(context) {
@@ -23,18 +25,18 @@ class FontSquare extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children:  <Widget> [
             Text(
-              'Google Fonts -> Lato',
+              'Google Fonts -> $tipoFonte',
               style: GoogleFonts.lato(
                 fontSize: 24,
                 decoration: TextDecoration.none,
                 color: Colors.white
               ),
             ),
-            FontTextButton(position: 0),
-            FontTextButton(position
-                : 1),
-            FontTextButton(position: 2),
-            FontTextButton(position: 3),
+            FontTextButton(position: 0, fonte_nome: tipoFonte),
+            FontTextButton(position: 1, fonte_nome: tipoFonte),
+            FontTextButton(position: 2, fonte_nome: tipoFonte),
+            FontTextButton(position: 3, fonte_nome: tipoFonte),
+            FontTextButton(position: 4, fonte_nome: tipoFonte),
           ],
         ),
       ),
