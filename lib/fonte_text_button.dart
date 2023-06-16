@@ -10,11 +10,25 @@ class FontTextButton extends StatelessWidget {
 
   @override
   Widget build(context) {
+     testo() {
+      switch(fonte_nome) {
+        case 'lato':
+          return Fonte().google_lato[position];
+        case 'sacramento':
+          return Fonte().google_sacramento[position];
+        case 'sahitya':
+          return Fonte().google_sahitya[position];
+        case 'aclonica':
+          return Fonte().google_aclonica[position];
+        case 'acme':
+          return Fonte().google_acme[position];
+      }
+    }
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextButton(
         onPressed: () {},
-        child: Text(Fonte().text, style: fonte_nome == 'lato' ? Fonte().google_lato[position] : Fonte().google_sacramento[position]),
+        child: Text(Fonte().text, style: testo()),
       ),
     );
   }
