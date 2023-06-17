@@ -26,6 +26,14 @@ class Fonte {
     color: Colors.black,
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
+  ), GoogleFonts.lato(
+    color: Colors.white,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.lato(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
 
   final List<TextStyle> google_sacramento = [GoogleFonts.sacramento(color: Colors.black,
@@ -49,6 +57,14 @@ class Fonte {
   color: Colors.black,
   fontSize: 50,
   decoration: TextDecoration.lineThrough,
+  ), GoogleFonts.sacramento(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.sacramento(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
 
   final List<TextStyle> google_sahitya = [GoogleFonts.sahitya(
@@ -73,6 +89,14 @@ class Fonte {
     color: Colors.black,
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
+  ), GoogleFonts.sahitya(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.sahitya(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
 
   final List<TextStyle> google_aclonica = [GoogleFonts.aclonica(
@@ -97,6 +121,14 @@ class Fonte {
     color: Colors.black,
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
+  ), GoogleFonts.aclonica(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.aclonica(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
 
   final List<TextStyle> google_acme = [GoogleFonts.acme(color: Colors.black,
@@ -120,5 +152,44 @@ class Fonte {
     color: Colors.black,
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
+  ), GoogleFonts.acme(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.acme(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
+  )];
+
+  final List<TextStyle> google_akayaKanadaka = [GoogleFonts.akayaKanadaka(color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.underline,
+    decorationColor: Colors.black,), GoogleFonts.akayaKanadaka(
+    color: Colors.white,
+    fontSize: 50,
+    fontWeight: FontWeight.bold,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.akayaKanadaka(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.akayaKanadaka(
+    color: Colors.white,
+    fontSize: 50,
+    fontStyle: FontStyle.italic,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.akayaKanadaka(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.lineThrough,
+  ),GoogleFonts.akayaKanadaka(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.akayaKanadaka(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
 }
