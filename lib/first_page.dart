@@ -29,6 +29,7 @@ class FirstPage extends StatelessWidget {
                 FontSquare('lato',),
                 FontSquare('sahitya'),
                 FontSquare('sacramento',),
+                FontSquare('adventPro',),
                 FontSquare('akayaKanadaka',),
               ],
             ),

@@ -24,6 +24,8 @@ class FontTextButton extends StatelessWidget {
           return Fonte().google_acme[position];
         case 'akayaKanadaka':
           return Fonte().google_akayaKanadaka[position];
+        case 'adventPro':
+          return Fonte().google_adventPro[position];
       }
     }
     return Padding(

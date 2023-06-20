@@ -8,8 +8,11 @@ class Controle extends StatefulWidget {
   List<Color> listaDeCores = [
     Colors.white,
     Colors.black,
-    Colors.red,
+    Colors.red.shade900,
     Colors.blue,
+    Colors.yellow,
+    Colors.orange,
+    Colors.pink,
   ];
   int atualbackgroundColor = 0;
   int atualTextColor = 1;
@@ -37,6 +40,21 @@ class _Controle extends State<Controle> {
         case 3:
           widget.atualbackgroundColor = 2;
           widget.atualTextColor = 3;
+          widget.troca = 4;
+          break;
+        case 4:
+          widget.atualbackgroundColor = 3;
+          widget.atualTextColor = 2;
+          widget.troca = 5;
+          break;
+        case 5:
+          widget.atualbackgroundColor = 4;
+          widget.atualTextColor = 5;
+          widget.troca = 6;
+          break;
+        case 6:
+          widget.atualbackgroundColor = 5;
+          widget.atualTextColor = 6;
           widget.troca = 1;
           break;
       }

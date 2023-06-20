@@ -20,8 +20,14 @@ class FontSquare extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 8.0, top: 50),
             ),
             Container(
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                border: Border.all(
+                  color: Colors.black,
+                  width: 2,
+                ),
+              ),
               width: 320,
-              color: Colors.orange,
               padding: const EdgeInsets.all(3.5),
               child: Text(
                   'Google Fonts\n$tipoFonte',
@@ -36,7 +42,13 @@ class FontSquare extends StatelessWidget {
           ],
         ),
         Container(
-          color: Colors.deepOrange,
+          decoration: BoxDecoration(
+            color: Colors.deepOrange,
+            border: Border.all(
+              color: Colors.black,
+              width: 2,
+            ),
+          ),
           height: 320,
           width: 320,
           child: SingleChildScrollView(
@@ -45,8 +57,6 @@ class FontSquare extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children:  <Widget> [
                     FontTextButton(position: 0, fonte_nome: tipoFonte),
                     FontTextButton(position: 1, fonte_nome: tipoFonte),
@@ -60,6 +70,9 @@ class FontSquare extends StatelessWidget {
               ],
             ),
           ),
+        ),
+        Container(
+          padding: const EdgeInsets.only(bottom: 8.0, top: 50),
         ),
       ],
     );

@@ -192,4 +192,35 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
   )];
+
+  final List<TextStyle> google_adventPro = [GoogleFonts.adventPro(color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.underline,
+    decorationColor: Colors.black,), GoogleFonts.adventPro(
+    color: Colors.white,
+    fontSize: 50,
+    fontWeight: FontWeight.bold,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.adventPro(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.adventPro(
+    color: Colors.white,
+    fontSize: 50,
+    fontStyle: FontStyle.italic,
+    decoration: TextDecoration.none,
+  ), GoogleFonts.adventPro(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.lineThrough,
+  ),GoogleFonts.adventPro(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.overline,
+  ),GoogleFonts.adventPro(
+    color: Colors.black,
+    fontSize: 50,
+    decoration: TextDecoration.combine(List<TextDecoration>.from([TextDecoration.underline, TextDecoration.overline])),
+  )];
 }
