@@ -31,7 +31,35 @@ class FontTextButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (ctx) => AlertDialog(
+              backgroundColor: testo()?.color == Colors.white ? Colors.black : Colors.white,
+              title: Text(
+                Fonte().text,
+                style: testo(),
+              ),
+              content: Text('Cor: ${testo()?.color}\nDecoraçao: ${testo()?.decoration}\nFonte: ${testo()?.fontFamily}', style: TextStyle(
+                color: testo()?.color == Colors.white ? Colors.white : Colors.black,
+              ),),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop();
+                  },
+                  child: Container(
+                    color: Colors.orange,
+                    padding: const EdgeInsets.all(14),
+                    child: const Text("OK", style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
         child: Text(Fonte().text, style: testo()),
       ),
     );

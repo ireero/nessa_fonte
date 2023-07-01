@@ -37,10 +37,37 @@ class FirstPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (ctx) => AlertDialog(
+              title: const Text('Alert Dialog Box'),
+              content: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Escreva uma nova palavra'
+                ),
+              ),
+              actions: <Widget> [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop();
+                  },
+                  child: Container(
+                    color: Colors.orange,
+                    padding: const EdgeInsets.all(14),
+                    child: const Text('OK', style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  ),
+                )
+              ],
+            )
+          );
+        },
         backgroundColor: Colors.orange,
         child: const Icon(
-          Icons.search,
+          Icons.wrap_text,
           color: Colors.black,
           size: 32,
         ),

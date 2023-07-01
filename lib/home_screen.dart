@@ -17,6 +17,24 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
+                onLongPress: () {
+                  showDialog(
+                    context: context,
+                    builder: (ctx) => AlertDialog(
+                      title: const Text('Alert Dialog Box'),
+                      content: const Text('You have raised a Alert Dialog Box'),
+                      actions: <Widget> [
+                        TextButton(onPressed: () {
+                          Navigator.of(ctx).pop();
+                        }, child: Container(
+                          color: Colors.orange,
+                          padding: const EdgeInsets.all(14),
+                          child: const Text('OK'),
+                        ))
+                      ],
+                    )
+                  );
+                },
                 onPressed: () {
                   trocartTela();
                   Navigator.push(context, MaterialPageRoute(
