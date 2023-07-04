@@ -38,72 +38,74 @@ class FontSquare extends StatelessWidget {
       }
     }
 
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.deepOrange,
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 2,
-                  ),
-                ),
-                height: 250,
-                width: double.infinity,
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 2,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 11.0),
+      child: Card(
+        elevation: 4,
+        color: Colors.deepOrange,
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 15),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 250,
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(width: 1.5, color: Colors.black),
+                          ),
+                        ),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            elevation: 4,
+                            padding: EdgeInsets.symmetric(
+                                vertical: 2, horizontal: 105),
+                            backgroundColor: Colors.orange,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'Google Fonts\n$tipoFonte',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: qual_a_fonte()?.fontFamily,
+                                shadows: const [
+                                  Shadow(
+                                    blurRadius: 2.5,
+                                    color: Colors.black,
+                                    offset: Offset(1.0, 1.0),
+                                  ),
+                                ],
+                                fontSize: 25,
+                                decoration: TextDecoration.none,
+                                color: Colors.black),
+                          ),
                         ),
                       ),
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(3.5),
-                      child: Text(
-                        'Google Fonts\n$tipoFonte',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontFamily: qual_a_fonte()?.fontFamily,
-                            shadows: const [
-                              Shadow(
-                                blurRadius: 2.5,
-                                color: Colors.black,
-                                offset: Offset(1.0, 1.0),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Expanded(
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.vertical,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Column(
+                                children: lista_botoes,
                               ),
                             ],
-                            fontSize: 20,
-                            decoration: TextDecoration.none,
-                            color: Colors.black),
-                      ),
-                    ),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Column(
-                              children: lista_botoes,
-                            ),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 8.0, top: 10),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
