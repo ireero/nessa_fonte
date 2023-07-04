@@ -40,7 +40,7 @@ class FontTextButton extends StatelessWidget {
                 Fonte().text,
                 style: testo(),
               ),
-              content: Text('Cor: ${testo()?.color}\nDecoraçao: ${testo()?.decoration}\nFonte: ${testo()?.fontFamily}', style: TextStyle(
+              content: Text('Cor: ${testo()?.color}\nDecoraçao: ${testo()?.decoration}\nFonte: ${testo()?.fontFamily}', style: TextStyle(fontFamily: testo()?.fontFamily,
                 color: testo()?.color == Colors.white ? Colors.white : Colors.black,
               ),),
               actions: <Widget>[
@@ -51,8 +51,9 @@ class FontTextButton extends StatelessWidget {
                   child: Container(
                     color: Colors.orange,
                     padding: const EdgeInsets.all(14),
-                    child: const Text("OK", style: TextStyle(
+                    child: Text("OK", style: TextStyle(
                       color: Colors.white,
+                      fontFamily: testo()?.fontFamily,
                     ),),
                   ),
                 ),

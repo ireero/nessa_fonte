@@ -58,7 +58,7 @@ class Fonte {
   fontSize: 50,
   decoration: TextDecoration.lineThrough,
   ), GoogleFonts.sacramento(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.sacramento(
@@ -90,7 +90,7 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
   ), GoogleFonts.sahitya(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.sahitya(
@@ -122,7 +122,7 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
   ), GoogleFonts.aclonica(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.aclonica(
@@ -153,7 +153,7 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
   ), GoogleFonts.acme(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.acme(
@@ -184,7 +184,7 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
   ),GoogleFonts.akayaKanadaka(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.akayaKanadaka(
@@ -215,7 +215,7 @@ class Fonte {
     fontSize: 50,
     decoration: TextDecoration.lineThrough,
   ),GoogleFonts.adventPro(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 50,
     decoration: TextDecoration.overline,
   ),GoogleFonts.adventPro(
