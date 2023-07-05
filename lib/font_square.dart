@@ -41,10 +41,11 @@ class FontSquare extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 11.0),
       child: Card(
+        margin: EdgeInsets.all(20),
         elevation: 4,
-        color: Colors.deepOrange,
+        color: Colors.yellow[800],
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 15),
+          padding: EdgeInsets.only(bottom: 15),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,9 +55,11 @@ class FontSquare extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
+                        width: double.maxFinite,
                         decoration: BoxDecoration(
                           border: Border(
-                            bottom: BorderSide(width: 1.5, color: Colors.black),
+                            left: BorderSide(width: 2, color: Colors.black54),
+                            bottom: BorderSide(width: 2, color: Colors.black54),
                           ),
                         ),
                         child: ElevatedButton(
@@ -68,7 +71,7 @@ class FontSquare extends StatelessWidget {
                           ),
                           onPressed: () {},
                           child: Text(
-                            'Google Fonts\n$tipoFonte',
+                            tipoFonte,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: qual_a_fonte()?.fontFamily,
@@ -81,7 +84,7 @@ class FontSquare extends StatelessWidget {
                                 ],
                                 fontSize: 25,
                                 decoration: TextDecoration.none,
-                                color: Colors.black),
+                                color: Colors.white),
                           ),
                         ),
                       ),
@@ -95,6 +98,8 @@ class FontSquare extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: lista_botoes,
                               ),
                             ],

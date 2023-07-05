@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nessa_fonte/first_page.dart';
+import 'dart:math';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({required this.trocartTela,required this.backgroundColor, required this.textColor,super.key});
+  HomeScreen(
+      {required this.trocartTela,
+      required this.backgroundColor,
+      required this.textColor,
+      super.key});
 
   Color backgroundColor;
   Color textColor;
@@ -10,6 +16,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    List<TextStyle> lista_fonts = [
+      GoogleFonts.lato(),
+      GoogleFonts.sacramento(),
+      GoogleFonts.sahitya(),
+      GoogleFonts.aclonica(),
+      GoogleFonts.acme(),
+      GoogleFonts.akayaKanadaka(),
+      GoogleFonts.adventPro()
+    ];
+    var valor_aleatorio = Random().nextInt(7);
     return Scaffold(
       backgroundColor: backgroundColor,
       body: Container(
@@ -23,31 +39,33 @@ class HomeScreen extends StatelessWidget {
               TextButton(
                   onLongPress: () {
                     showDialog(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        title: const Text('Alert Dialog Box'),
-                        content: const Text('You have raised a Alert Dialog Box'),
-                        actions: <Widget> [
-                          TextButton(onPressed: () {
-                            Navigator.of(ctx).pop();
-                          }, child: Container(
-                            color: Colors.orange,
-                            padding: const EdgeInsets.all(14),
-                            child: const Text('OK'),
-                          ))
-                        ],
-                      )
-                    );
+                        context: context,
+                        builder: (ctx) => AlertDialog(
+                              title: const Text('Alert Dialog Box'),
+                              content: const Text(
+                                  'You have raised a Alert Dialog Box'),
+                              actions: <Widget>[
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.of(ctx).pop();
+                                    },
+                                    child: Container(
+                                      color: Colors.orange,
+                                      padding: const EdgeInsets.all(14),
+                                      child: const Text('OK'),
+                                    ))
+                              ],
+                            ));
                   },
                   onPressed: () {
                     trocartTela();
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => FirstPage()
-                    ));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FirstPage()));
                   },
                   child: Text(
                     'Nessa Fonte',
                     style: TextStyle(
+                      fontFamily: lista_fonts[valor_aleatorio].fontFamily,
                       decoration: TextDecoration.lineThrough,
                       fontWeight: FontWeight.bold,
                       fontSize: 32,

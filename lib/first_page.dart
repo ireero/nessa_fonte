@@ -6,6 +6,8 @@ import 'classes/fonte_class.dart';
 class FirstPage extends StatelessWidget {
   FirstPage({super.key});
 
+  final controller = TextEditingController();
+
   final List<FontSquare> lista_squares = [
     FontSquare('aclonica'),
     FontSquare('acme'),
@@ -34,7 +36,7 @@ class FirstPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Voltar'),
+        title: const Text('Google Fonts'),
       ),
       body: Container(
         color: Colors.white,
@@ -50,6 +52,7 @@ class FirstPage extends StatelessWidget {
               builder: (ctx) => AlertDialog(
                     title: const Text('Alert Dialog Box'),
                     content: const TextField(
+                      controller: controller,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Escreva uma nova palavra'),

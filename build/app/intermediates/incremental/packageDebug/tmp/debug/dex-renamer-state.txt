@@ -1,4 +1,4 @@
-#Tue Jul 04 02:30:06 BRT 2023
+#Tue Jul 04 21:20:49 BRT 2023
 base.0=/home/ireero/Documents/GitHub/nessa_fonte/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -1,0 +1,11 @@
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/nessa_fonte
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/ireero/Documents/GitHub/nessa_fonte/build/linux/x64/debug/bundle/data/flutter_assets/version.json
