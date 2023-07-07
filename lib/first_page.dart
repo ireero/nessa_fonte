@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:nessa_fonte/font_square.dart';
 import 'package:nessa_fonte/controle.dart';
 import 'classes/fonte_class.dart';
+import 'classes/change_word.dart';
 
 class FirstPage extends StatelessWidget {
-  FirstPage({super.key});
-
-  final controller = TextEditingController();
+  FirstPage({required this.mudarTexto, super.key});
 
   final List<FontSquare> lista_squares = [
     FontSquare('aclonica'),
@@ -25,6 +24,8 @@ class FirstPage extends StatelessWidget {
       'akayaKanadaka',
     ),
   ];
+
+  Function mudarTexto;
 
   @override
   Widget build(context) {
@@ -51,24 +52,22 @@ class FirstPage extends StatelessWidget {
               context: context,
               builder: (ctx) => AlertDialog(
                     title: const Text('Alert Dialog Box'),
-                    content: const TextField(
-                      controller: controller,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Escreva uma nova palavra'),
-                    ),
+                    content: const ChangeWord(),
                     actions: <Widget>[
                       TextButton(
                         onPressed: () {
+                          mudarTexto('Teste');
                           Navigator.of(ctx).pop();
                         },
                         child: Container(
                           color: Colors.orange,
-                          padding: const EdgeInsets.all(14),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 12, horizontal: 25),
                           child: const Text(
                             'OK',
                             style: TextStyle(
                               color: Colors.white,
+                              fontSize: 15,
                             ),
                           ),
                         ),

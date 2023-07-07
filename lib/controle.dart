@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
-
 class Controle extends StatefulWidget {
   Controle({super.key});
 
@@ -17,16 +16,22 @@ class Controle extends StatefulWidget {
   int atualbackgroundColor = 0;
   int atualTextColor = 1;
   int troca = 1;
+  String text = 'Fonte';
 
   @override
   State<Controle> createState() => _Controle();
 }
 
 class _Controle extends State<Controle> {
+  void mudarTexto(texto) {
+    setState(() {
+      widget.text = texto;
+    });
+  }
 
   void trocarTelas() {
     setState(() {
-      switch(widget.troca) {
+      switch (widget.troca) {
         case 1:
           widget.atualbackgroundColor = 1;
           widget.atualTextColor = 0;
@@ -58,16 +63,16 @@ class _Controle extends State<Controle> {
           widget.troca = 1;
           break;
       }
-      });
+    });
   }
 
   @override
   Widget build(context) {
-
     return HomeScreen(
-        backgroundColor: widget.listaDeCores[widget.atualbackgroundColor],
-        textColor: widget.listaDeCores[widget.atualTextColor],
+      backgroundColor: widget.listaDeCores[widget.atualbackgroundColor],
+      textColor: widget.listaDeCores[widget.atualTextColor],
       trocartTela: trocarTelas,
-      );
+      mudarTexto: mudarTexto,
+    );
   }
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../controle.dart';
 
 class Fonte {
-  final String text = 'Fonte';
+  final String text = Controle().text;
   final List<TextStyle> google_lato = [
     GoogleFonts.lato(
       color: Colors.black,

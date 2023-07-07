@@ -8,11 +8,13 @@ class HomeScreen extends StatelessWidget {
       {required this.trocartTela,
       required this.backgroundColor,
       required this.textColor,
+      required this.mudarTexto,
       super.key});
 
   Color backgroundColor;
   Color textColor;
   Function trocartTela;
+  Function mudarTexto;
 
   @override
   Widget build(context) {
@@ -41,9 +43,24 @@ class HomeScreen extends StatelessWidget {
                     showDialog(
                         context: context,
                         builder: (ctx) => AlertDialog(
-                              title: const Text('Alert Dialog Box'),
-                              content: const Text(
-                                  'You have raised a Alert Dialog Box'),
+                              title: Text(
+                                'Nessa Fonte',
+                                style: TextStyle(
+                                  fontFamily:
+                                      lista_fonts[valor_aleatorio].fontFamily,
+                                  decoration: TextDecoration.lineThrough,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 32,
+                                  color: textColor,
+                                ),
+                              ),
+                              backgroundColor: backgroundColor,
+                              content: Text(
+                                  'Cor: ${textColor}\nDecoraçao: ${TextDecoration.lineThrough}\nFonte: ${lista_fonts[valor_aleatorio].fontFamily},',
+                                  style: TextStyle(
+                                      fontFamily: lista_fonts[valor_aleatorio]
+                                          .fontFamily,
+                                      color: textColor)),
                               actions: <Widget>[
                                 TextButton(
                                     onPressed: () {
@@ -59,8 +76,12 @@ class HomeScreen extends StatelessWidget {
                   },
                   onPressed: () {
                     trocartTela();
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => FirstPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FirstPage(
+                                  mudarTexto: mudarTexto,
+                                )));
                   },
                   child: Text(
                     'Nessa Fonte',
