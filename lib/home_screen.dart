@@ -8,13 +8,11 @@ class HomeScreen extends StatelessWidget {
       {required this.trocartTela,
       required this.backgroundColor,
       required this.textColor,
-      required this.mudarTexto,
       super.key});
 
   Color backgroundColor;
   Color textColor;
   Function trocartTela;
-  Function mudarTexto;
 
   @override
   Widget build(context) {
@@ -76,12 +74,8 @@ class HomeScreen extends StatelessWidget {
                   },
                   onPressed: () {
                     trocartTela();
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => FirstPage(
-                                  mudarTexto: mudarTexto,
-                                )));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FirstPage()));
                   },
                   child: Text(
                     'Nessa Fonte',

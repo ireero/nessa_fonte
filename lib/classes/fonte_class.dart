@@ -3,7 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controle.dart';
 
 class Fonte {
-  final String text = Controle().text;
+  final List<String> links_fontes = [
+    'https://fonts.google.com/specimen/Lato?preview.text=Flutter&preview.text_type=custom&query=lato',
+    'https://fonts.google.com/specimen/Sacramento?preview.text=Flutter&preview.text_type=custom&query=sacramento',
+    'https://fonts.google.com/specimen/Sahitya?preview.text=Flutter&preview.text_type=custom&query=sahitya',
+    'https://fonts.google.com/specimen/Aclonica?preview.text=Flutter&preview.text_type=custom&query=aclonica',
+    'https://fonts.google.com/specimen/Acme?preview.text=Flutter&preview.text_type=custom&query=acme',
+    '',
+    ''
+  ];
+
   final List<TextStyle> google_lato = [
     GoogleFonts.lato(
       color: Colors.black,

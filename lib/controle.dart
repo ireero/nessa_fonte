@@ -16,19 +16,12 @@ class Controle extends StatefulWidget {
   int atualbackgroundColor = 0;
   int atualTextColor = 1;
   int troca = 1;
-  String text = 'Fonte';
 
   @override
   State<Controle> createState() => _Controle();
 }
 
 class _Controle extends State<Controle> {
-  void mudarTexto(texto) {
-    setState(() {
-      widget.text = texto;
-    });
-  }
-
   void trocarTelas() {
     setState(() {
       switch (widget.troca) {
@@ -72,7 +65,6 @@ class _Controle extends State<Controle> {
       backgroundColor: widget.listaDeCores[widget.atualbackgroundColor],
       textColor: widget.listaDeCores[widget.atualTextColor],
       trocartTela: trocarTelas,
-      mudarTexto: mudarTexto,
     );
   }
 }

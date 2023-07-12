@@ -4,20 +4,49 @@ import 'package:nessa_fonte/fonte_text_button.dart';
 import 'classes/fonte_class.dart';
 
 class FontSquare extends StatelessWidget {
-  FontSquare(this.tipoFonte, {super.key});
+  FontSquare(this.tipoFonte, {required this.text, super.key});
 
   var tipoFonte = '';
+  String text;
 
   @override
   Widget build(context) {
     List<FontTextButton> lista_botoes = [
-      FontTextButton(position: 0, fonte_nome: tipoFonte),
-      FontTextButton(position: 1, fonte_nome: tipoFonte),
-      FontTextButton(position: 2, fonte_nome: tipoFonte),
-      FontTextButton(position: 3, fonte_nome: tipoFonte),
-      FontTextButton(position: 4, fonte_nome: tipoFonte),
-      FontTextButton(position: 5, fonte_nome: tipoFonte),
-      FontTextButton(position: 6, fonte_nome: tipoFonte),
+      FontTextButton(
+        position: 0,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 1,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 2,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 3,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 4,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 5,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
+      FontTextButton(
+        position: 6,
+        fonte_nome: tipoFonte,
+        text: text,
+      ),
     ];
     qual_a_fonte() {
       switch (tipoFonte) {
@@ -39,7 +68,7 @@ class FontSquare extends StatelessWidget {
     }
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 11.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Card(
         margin: EdgeInsets.all(20),
         elevation: 4,
