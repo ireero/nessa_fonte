@@ -72,7 +72,7 @@ class FontSquare extends StatelessWidget {
       child: Card(
         margin: EdgeInsets.all(20),
         elevation: 4,
-        color: Colors.yellow[800],
+        color: Colors.white,
         child: Padding(
           padding: EdgeInsets.only(bottom: 15),
           child: SingleChildScrollView(
@@ -84,36 +84,35 @@ class FontSquare extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         width: double.maxFinite,
-                        decoration: BoxDecoration(
-                          border: Border(
-                            left: BorderSide(width: 2, color: Colors.black54),
-                            bottom: BorderSide(width: 2, color: Colors.black54),
-                          ),
-                        ),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
+                            shape: BeveledRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0)),
                             elevation: 4,
-                            padding: EdgeInsets.symmetric(
-                                vertical: 2, horizontal: 105),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 2, horizontal: 80),
                             backgroundColor: Colors.orange,
                           ),
                           onPressed: () {},
-                          child: Text(
-                            tipoFonte,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontFamily: qual_a_fonte()?.fontFamily,
-                                shadows: const [
-                                  Shadow(
-                                    blurRadius: 2.5,
-                                    color: Colors.black,
-                                    offset: Offset(1.0, 1.0),
-                                  ),
-                                ],
-                                fontSize: 25,
-                                decoration: TextDecoration.none,
-                                color: Colors.white),
+                          child: Container(
+                            child: Text(
+                              tipoFonte,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: qual_a_fonte()?.fontFamily,
+                                  shadows: const [
+                                    Shadow(
+                                      blurRadius: 2.5,
+                                      color: Colors.black,
+                                      offset: Offset(1.0, 1.0),
+                                    ),
+                                  ],
+                                  fontSize: 25,
+                                  decoration: TextDecoration.none,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
                       ),

@@ -21,7 +21,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.lato(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -32,7 +32,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.lato(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -43,7 +43,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.lato(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -63,7 +63,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.sacramento(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -74,7 +74,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.sacramento(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -85,7 +85,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.sacramento(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -105,7 +105,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.sahitya(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -116,7 +116,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.sahitya(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -127,7 +127,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.sahitya(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -147,7 +147,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.aclonica(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -158,7 +158,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.aclonica(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -169,7 +169,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.aclonica(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -189,7 +189,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.acme(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -200,7 +200,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.acme(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -211,7 +211,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.acme(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -231,7 +231,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.akayaKanadaka(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -242,7 +242,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.akayaKanadaka(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -253,7 +253,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.akayaKanadaka(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),
@@ -273,7 +273,7 @@ class Fonte {
       decorationColor: Colors.black,
     ),
     GoogleFonts.adventPro(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontWeight: FontWeight.bold,
       decoration: TextDecoration.none,
@@ -284,7 +284,7 @@ class Fonte {
       decoration: TextDecoration.none,
     ),
     GoogleFonts.adventPro(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       fontStyle: FontStyle.italic,
       decoration: TextDecoration.none,
@@ -295,7 +295,7 @@ class Fonte {
       decoration: TextDecoration.lineThrough,
     ),
     GoogleFonts.adventPro(
-      color: Colors.white,
+      color: Colors.orange,
       fontSize: 50,
       decoration: TextDecoration.overline,
     ),

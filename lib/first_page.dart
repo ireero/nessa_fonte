@@ -70,16 +70,20 @@ class _FirstPage extends State<FirstPage> {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white,
         leading: BackButton(
+          color: Colors.deepOrange,
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: const Text('Google Fonts'),
+        title: const Text(
+          'Google Fonts',
+          style: TextStyle(color: Colors.deepOrange),
+        ),
       ),
       body: Container(
-        color: Colors.white,
+        color: Colors.orange,
         child: ListView.builder(
           itemCount: lista_squares.length,
           itemBuilder: (ctx, index) => lista_squares[index],
@@ -94,7 +98,7 @@ class _FirstPage extends State<FirstPage> {
                     content: TextField(
                       controller: textController,
                       decoration: InputDecoration(
-                          label: Text('Digite somente uma palavra'),
+                          label: const Text('Digite somente uma palavra'),
                           errorText: textController.text == '' ||
                                   textController.text == ' '
                               ? 'Não deixe o campo vazio'
@@ -153,10 +157,10 @@ class _FirstPage extends State<FirstPage> {
                     ],
                   ));
         },
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white,
         child: const Icon(
           Icons.wrap_text,
-          color: Colors.black,
+          color: Colors.deepOrange,
           size: 32,
         ),
       ),
