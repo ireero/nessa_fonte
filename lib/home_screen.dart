@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nessa_fonte/first_page.dart';
 import 'dart:math';
 
+import 'package:page_transition/page_transition.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen(
       {required this.trocartTela,
@@ -73,9 +75,13 @@ class HomeScreen extends StatelessWidget {
                             ));
                   },
                   onPressed: () {
-                    trocartTela();
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => FirstPage()));
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            child: FirstPage(
+                              trocaTelaNessaFonte: trocartTela,
+                            ),
+                            type: PageTransitionType.fade));
                   },
                   child: Text(
                     'Nessa Fonte',

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../controle.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Fonte {
   final List<String> links_fontes = [
@@ -9,9 +14,18 @@ class Fonte {
     'https://fonts.google.com/specimen/Sahitya?preview.text=Flutter&preview.text_type=custom&query=sahitya',
     'https://fonts.google.com/specimen/Aclonica?preview.text=Flutter&preview.text_type=custom&query=aclonica',
     'https://fonts.google.com/specimen/Acme?preview.text=Flutter&preview.text_type=custom&query=acme',
-    '',
-    ''
+    'https://fonts.google.com/specimen/Akaya+Kanadaka',
+    'https://fonts.google.com/specimen/Advent+Pro'
   ];
+
+  Future<void> openWebsite(int num) async {
+    if (!await launchUrl(Uri.parse(links_fontes[num]),
+        mode: LaunchMode.externalApplication,
+        webViewConfiguration: const WebViewConfiguration(
+            headers: <String, String>{'key': 'value'}))) {
+      await launchUrl(Uri.parse(links_fontes[num]));
+    }
+  }
 
   final List<TextStyle> google_lato = [
     GoogleFonts.lato(

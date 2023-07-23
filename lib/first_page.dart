@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nessa_fonte/font_square.dart';
 import 'package:nessa_fonte/controle.dart';
+import 'package:nessa_fonte/home_screen.dart';
 import 'classes/fonte_class.dart';
 
 class FirstPage extends StatefulWidget {
-  FirstPage({super.key});
+  const FirstPage({required this.trocaTelaNessaFonte, super.key});
+
+  final Function trocaTelaNessaFonte;
 
   @override
   State<FirstPage> createState() {
@@ -14,6 +18,8 @@ class FirstPage extends StatefulWidget {
 
 class _FirstPage extends State<FirstPage> {
   final textController = TextEditingController();
+
+  String errorText = '';
 
   @override
   void dispose() {
@@ -72,14 +78,15 @@ class _FirstPage extends State<FirstPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: BackButton(
-          color: Colors.deepOrange,
+          color: Colors.orange,
           onPressed: () {
+            widget.trocaTelaNessaFonte();
             Navigator.pop(context);
           },
         ),
         title: const Text(
           'Google Fonts',
-          style: TextStyle(color: Colors.deepOrange),
+          style: TextStyle(color: Colors.orange),
         ),
       ),
       body: Container(
@@ -91,70 +98,80 @@ class _FirstPage extends State<FirstPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          errorText = '';
           showDialog(
               context: context,
-              builder: (ctx) => AlertDialog(
-                    title: const Text('Mude o texto'),
-                    content: TextField(
-                      controller: textController,
-                      decoration: InputDecoration(
-                          label: const Text('Digite somente uma palavra'),
-                          errorText: textController.text == '' ||
-                                  textController.text == ' '
-                              ? 'Não deixe o campo vazio'
-                              : null),
-                      keyboardType: TextInputType.text,
-                    ),
-                    actions: <Widget>[
-                      TextButton(
-                        onPressed: () {
-                          mudarTexto(textController.text);
-                          lista_squares = [
-                            FontSquare(
-                              'aclonica',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'acme',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'lato',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'sahitya',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'sacramento',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'adventPro',
-                              text: text,
-                            ),
-                            FontSquare(
-                              'akayaKanadaka',
-                              text: text,
-                            ),
-                          ];
-                          Navigator.of(ctx).pop();
-                        },
-                        child: Container(
-                          color: Colors.orange,
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 12, horizontal: 25),
-                          child: const Text(
-                            'OK',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
+              builder: (ctx) => StatefulBuilder(
+                    builder: (context, setState) => AlertDialog(
+                      title: Text(
+                        'Mudar Texto',
+                        style: GoogleFonts.acme(color: Colors.black),
+                      ),
+                      content: TextField(
+                        controller: textController,
+                        decoration: InputDecoration(
+                            label: const Text('Escrava o texto aqui...'),
+                            errorText: errorText == '' ? null : errorText),
+                        keyboardType: TextInputType.text,
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            if (textController.text == '' ||
+                                textController.text == ' ') {
+                              setState(() {
+                                errorText = 'Escreva alguma coisa';
+                              });
+                            } else {
+                              mudarTexto(textController.text);
+                              lista_squares = [
+                                FontSquare(
+                                  'aclonica',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'acme',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'lato',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'sahitya',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'sacramento',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'adventPro',
+                                  text: text,
+                                ),
+                                FontSquare(
+                                  'akayaKanadaka',
+                                  text: text,
+                                ),
+                              ];
+                              Navigator.of(ctx).pop();
+                            }
+                          },
+                          child: Container(
+                            color: Colors.orange,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 12, horizontal: 25),
+                            child: const Text(
+                              'OK',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                              ),
                             ),
                           ),
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ));
         },
         backgroundColor: Colors.white,

@@ -9,7 +9,7 @@ void main() {
     theme: ThemeData().copyWith(
       useMaterial3: true,
       colorScheme: kcolorScheme,
-      cardTheme: CardTheme().copyWith(),
+      cardTheme: const CardTheme().copyWith(),
     ),
     home: Scaffold(
       body: Controle(),

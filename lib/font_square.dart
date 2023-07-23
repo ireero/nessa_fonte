@@ -8,6 +8,7 @@ class FontSquare extends StatelessWidget {
 
   var tipoFonte = '';
   String text;
+  int numFonte = -1;
 
   @override
   Widget build(context) {
@@ -51,18 +52,25 @@ class FontSquare extends StatelessWidget {
     qual_a_fonte() {
       switch (tipoFonte) {
         case 'lato':
+          numFonte = 0;
           return Fonte().google_lato[0];
         case 'sacramento':
+          numFonte = 1;
           return Fonte().google_sacramento[0];
         case 'sahitya':
+          numFonte = 2;
           return Fonte().google_sahitya[0];
         case 'aclonica':
+          numFonte = 3;
           return Fonte().google_aclonica[0];
         case 'acme':
+          numFonte = 4;
           return Fonte().google_acme[0];
         case 'akayaKanadaka':
+          numFonte = 5;
           return Fonte().google_akayaKanadaka[0];
         case 'adventPro':
+          numFonte = 6;
           return Fonte().google_adventPro[0];
       }
     }
@@ -70,11 +78,11 @@ class FontSquare extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Card(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         elevation: 4,
         color: Colors.white,
         child: Padding(
-          padding: EdgeInsets.only(bottom: 15),
+          padding: const EdgeInsets.only(bottom: 15),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -95,7 +103,9 @@ class FontSquare extends StatelessWidget {
                                 vertical: 2, horizontal: 80),
                             backgroundColor: Colors.orange,
                           ),
-                          onPressed: () {},
+                          onPressed: () async {
+                            Fonte().openWebsite(numFonte);
+                          },
                           child: Container(
                             child: Text(
                               tipoFonte,
@@ -116,7 +126,7 @@ class FontSquare extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Expanded(
