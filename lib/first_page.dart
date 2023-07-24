@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nessa_fonte/font_square.dart';
-import 'package:nessa_fonte/controle.dart';
 import 'package:nessa_fonte/home_screen.dart';
 import 'classes/fonte_class.dart';
 
 class FirstPage extends StatefulWidget {
-  const FirstPage({required this.trocaTelaNessaFonte, super.key});
-
-  final Function trocaTelaNessaFonte;
+  const FirstPage({super.key});
 
   @override
   State<FirstPage> createState() {
@@ -77,13 +74,6 @@ class _FirstPage extends State<FirstPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: BackButton(
-          color: Colors.orange,
-          onPressed: () {
-            widget.trocaTelaNessaFonte();
-            Navigator.pop(context);
-          },
-        ),
         title: const Text(
           'Google Fonts',
           style: TextStyle(color: Colors.orange),
@@ -181,6 +171,10 @@ class _FirstPage extends State<FirstPage> {
           size: 32,
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Teste'),
+        BottomNavigationBarItem(icon: Icon(Icons.abc), label: 'Teste')
+      ]),
     );
   }
 }

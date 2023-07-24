@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nessa_fonte/choice_type_font.dart';
 import 'package:nessa_fonte/first_page.dart';
 import 'dart:math';
 
 import 'package:page_transition/page_transition.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen(
-      {required this.trocartTela,
-      required this.backgroundColor,
-      required this.textColor,
-      super.key});
-
-  Color backgroundColor;
-  Color textColor;
-  Function trocartTela;
+  HomeScreen({super.key});
 
   @override
   Widget build(context) {
@@ -28,12 +21,14 @@ class HomeScreen extends StatelessWidget {
       GoogleFonts.adventPro()
     ];
     var valor_aleatorio = Random().nextInt(7);
+
+    void alterarValorAleatorio() {
+      valor_aleatorio = Random().nextInt(7);
+    }
+
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: Colors.white,
       body: Container(
-        decoration: BoxDecoration(
-          border: Border.all(width: 8),
-        ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -51,16 +46,16 @@ class HomeScreen extends StatelessWidget {
                                   decoration: TextDecoration.lineThrough,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 32,
-                                  color: textColor,
+                                  color: Colors.orange,
                                 ),
                               ),
-                              backgroundColor: backgroundColor,
+                              backgroundColor: Colors.white,
                               content: Text(
-                                  'Cor: ${textColor}\nDecoraçao: ${TextDecoration.lineThrough}\nFonte: ${lista_fonts[valor_aleatorio].fontFamily},',
+                                  'Cor: ${Colors.orange}\nDecoraçao: ${TextDecoration.lineThrough}\nFonte: ${lista_fonts[valor_aleatorio].fontFamily},',
                                   style: TextStyle(
                                       fontFamily: lista_fonts[valor_aleatorio]
                                           .fontFamily,
-                                      color: textColor)),
+                                      color: Colors.orange)),
                               actions: <Widget>[
                                 TextButton(
                                     onPressed: () {
@@ -78,9 +73,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         PageTransition(
-                            child: FirstPage(
-                              trocaTelaNessaFonte: trocartTela,
-                            ),
+                            child: ChoiceTypeFont(),
                             type: PageTransitionType.fade));
                   },
                   child: Text(
@@ -90,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: TextDecoration.lineThrough,
                       fontWeight: FontWeight.bold,
                       fontSize: 32,
-                      color: textColor,
+                      color: Colors.orange,
                     ),
                   )),
             ],

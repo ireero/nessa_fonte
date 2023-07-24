@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nessa_fonte/controle.dart';
+import 'package:nessa_fonte/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 var kcolorScheme = ColorScheme.fromSeed(seedColor: Colors.orange);
@@ -12,7 +12,7 @@ void main() {
       cardTheme: const CardTheme().copyWith(),
     ),
     home: Scaffold(
-      body: Controle(),
+      body: HomeScreen(),
     ),
   ));
 }
